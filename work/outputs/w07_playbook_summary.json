@@ -1,26 +1,25 @@
 {
   "total_items_scored": 10000,
-  "unique_clients": 30,
+  "unique_clients": 33,
   "action_mix": {
-    "MONITOR": 5409,
-    "REWRITE_META_DESCRIPTION_AND_TITLE": 2403,
-    "REFRESH_METADATA_AND_HEADERS": 2091,
-    "REFRESH_AND_UPDATE_FRESHNESS": 97
+    "MONITOR": 4534,
+    "REWRITE_META_DESCRIPTION_AND_TITLE": 4089,
+    "REFRESH_METADATA_AND_HEADERS": 1257,
+    "REFRESH_AND_UPDATE_FRESHNESS": 120
   },
   "reason_code_mix": {
-    "MONITOR_ONLY": 5409,
-    "LOW_CTR_OPPORTUNITY": 2403,
-    "STRIKING_DISTANCE_HIGH_OPS": 2091,
-    "DECAY_REFRESH_CANDIDATE": 97
+    "MONITOR_ONLY": 4534,
+    "LOW_CTR_OPPORTUNITY": 4089,
+    "STRIKING_DISTANCE_HIGH_OPS": 1257,
+    "DECAY_REFRESH_CANDIDATE": 120
   },
   "value_tier_mix": {
-    "LOW": 5409,
-    "HIGH": 4591
+    "HIGH": 5466,
+    "LOW": 4534
   },
-  "no_go_count": 302,
   "precision_at_10": 1.0,
   "precision_at_20": 1.0,
   "precision_at_50": 1.0,
-  "top50_total_future_clicks": 7460,
+  "top50_total_future_clicks": 3039,
   "top50_total_review_hours": 75.0
 }
