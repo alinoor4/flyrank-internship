@@ -1,0 +1,47 @@
+[
+  {
+    "Model": "Rule Baseline (Week 4)",
+    "Base Rate": "0.1986",
+    "Precision@10": "0.9000 (90.0%)",
+    "Precision@20": "0.8500 (85.0%)",
+    "Precision@50": "0.8600 (86.0%)",
+    "ROC-AUC": "0.9104",
+    "PR-AUC": "0.7259"
+  },
+  {
+    "Model": "Logistic Regression",
+    "Base Rate": "0.1986",
+    "Precision@10": "1.0000 (100.0%)",
+    "Precision@20": "1.0000 (100.0%)",
+    "Precision@50": "1.0000 (100.0%)",
+    "ROC-AUC": "0.9487",
+    "PR-AUC": "0.8519"
+  },
+  {
+    "Model": "Decision Tree (depth=4)",
+    "Base Rate": "0.1986",
+    "Precision@10": "0.8000 (80.0%)",
+    "Precision@20": "0.8500 (85.0%)",
+    "Precision@50": "0.8800 (88.0%)",
+    "ROC-AUC": "0.9563",
+    "PR-AUC": "0.8321"
+  },
+  {
+    "Model": "Random Forest (depth=6)",
+    "Base Rate": "0.1986",
+    "Precision@10": "1.0000 (100.0%)",
+    "Precision@20": "1.0000 (100.0%)",
+    "Precision@50": "0.9400 (94.0%)",
+    "ROC-AUC": "0.9592",
+    "PR-AUC": "0.8639"
+  },
+  {
+    "Model": "Gradient Boosting (depth=4)",
+    "Base Rate": "0.1986",
+    "Precision@10": "1.0000 (100.0%)",
+    "Precision@20": "1.0000 (100.0%)",
+    "Precision@50": "1.0000 (100.0%)",
+    "ROC-AUC": "0.9608",
+    "PR-AUC": "0.8701"
+  }
+]
