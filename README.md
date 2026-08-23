@@ -1,147 +1,131 @@
-# FlyRank ML Internship — Starter Repo
+# FlyRank ML Internship — Capstone Research & Portfolio
 
-**Applied Search Intelligence: Google Search Ranking & Discoverability**
+> **Lane 1:** Ranking Signal Analysis & Opportunity Scoring (Action Queue Ranking)  
+> **Author:** Ali Noor  
+> **Deployed Research Paper:** [https://alinoor4.github.io/flyrank-internship/](https://alinoor4.github.io/flyrank-internship/)  
+> **Dataset Credit:** Built on the [FlyRank](https://flyrank.ai/) Search Intelligence ML Internship dataset (~79M rows).
 
-This is the starting point for the FlyRank ML Internship. You **clone it into your own public
-repo** (one click — *Use this template*), build everything there, and submit that repo URL on
-each assignment in your portal — it's your workspace, your submission, and your portfolio all
-at once. The rhythm is simple: do the work, commit it, submit on the card. Done.
-
-Everything here runs on a small **anonymized** slice of real FlyRank search data. No credentials,
-no private client data, no setup headaches.
-
-> **New here?** Two reads: **[SETUP.md](SETUP.md)** (GitHub, Colab, and data access — ten
-> minutes, with every silent pitfall flagged), then **[GUIDE.md](GUIDE.md)** (every file
-> explained, what to edit vs. leave alone, and where your own work goes — five minutes).
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Research%20Paper-0284c7?style=flat-square&logo=github)](https://alinoor4.github.io/flyrank-internship/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
 ---
 
-## Quickstart — first win in 2 minutes
+## Executive Summary & Headline Results
 
-The fastest path is Google Colab (one click, zero install). Open Notebook 1 and run all cells:
+This repository contains the end-to-end machine learning system, reproducible research notebooks, and published research paper for **Lane 1: Ranking Signal Analysis / Opportunity Scoring**. 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/notebooks/01_first_look_and_discovery.ipynb?flush_cache=true)
- **Week 1 — Run it, then discover a real truth yourself**
+We addressed the enterprise editorial triage bottleneck: determining which URLs in a large publishing catalog (10,000+ articles) will yield the highest organic search return from an editorial refresh sprint (metadata rewrite, header restructuring, or content depth expansion) versus passive monitoring.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/notebooks/02_your_first_readable_model.ipynb?flush_cache=true)
- **Week 2 — The model is just a rule you can read**
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/notebooks/03_working_with_the_full_release.ipynb?flush_cache=true)
- **Weeks 3+ — The full release (~79M rows) via DuckDB, no download needed** — hosted at
- [`FlyRank/internship-warehouse`](https://huggingface.co/datasets/FlyRank/internship-warehouse) (gated: request access + accept the data-use terms, approval is instant)
-
----
-
-## Your assignment notebooks — open, fill, save, done
-
-Every assignment is one pre-named skeleton notebook in `work/notebooks/`. Click its badge,
-fill the sections in order, then **File → Save a copy in GitHub → OK** — the dialog is
-already pre-filled with your repo and the right path.
-
-> **The badges know whose repo they're in.** About 30 seconds after you create your copy, an
-> automatic commit ("Point Colab badges at this copy") rewires every badge in it to open
-> **your** notebooks — with your saved work — instead of the shared read-only ones. Reading
-> this on the shared starter page? The badges below open blank previews; make your copy
-> first ([SETUP.md](SETUP.md), Moment 1).
-
-| Week | Card | Notebook | Open |
-|---|---|---|---|
-| 1 | ML-02 | `w01_research_question` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w01_research_question.ipynb?flush_cache=true) |
-| 2 | ML-03 | `w02_ml_task_framing` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w02_ml_task_framing.ipynb?flush_cache=true) |
-| 3 | ML-04 | `w03_data_contract` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_data_contract.ipynb?flush_cache=true) |
-| 3 | ML-05 | `w03_feature_leakage_check` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_feature_leakage_check.ipynb?flush_cache=true) |
-| 4 | ML-06 | `w04_signal_audit` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_signal_audit.ipynb?flush_cache=true) |
-| 4 | ML-07 | `w04_baseline_score` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_baseline_score.ipynb?flush_cache=true) |
-| 5 | ML-08 | `w05_model` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w05_model.ipynb?flush_cache=true) |
-| 6 | ML-09 | `w06_validation_audit` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w06_validation_audit.ipynb?flush_cache=true) |
-| 7 | ML-10 | `w07_action_playbook` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w07_action_playbook.ipynb?flush_cache=true) |
-| 8 | ML-11 | `capstone` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true) |
-
-Badges not opening *your* copy? Colab's built-in opener always works: **File → Open notebook
-→ GitHub tab** → paste `github.com/you/your-repo` → pick the notebook.
-
-### Prefer local?
-
-```bash
-git clone <this-repo-url>
-cd flyrank-ml-internship-starter
-pip install -r requirements.txt          # or: uv pip install -r requirements.txt
-python scripts/run_all.py
-```
-
-That runs the whole pipeline on the bundled sample and writes results to `outputs/`.
+| Metric / Evaluation Split | Transparent Rule Baseline (Week 4) | Best ML Model: Gradient Boosting (depth=4) |
+|---|---|---|
+| **Validation Base Rate ($\alpha$)** | `0.1986` (19.86%) | `0.1986` (19.86%) |
+| **Precision@10 (Holdout Domains)** | `0.9000` (90.0%) | **`1.0000` (100.0%)** |
+| **Precision@20 (Holdout Domains)** | `0.8500` (85.0%) | **`1.0000` (100.0%)** |
+| **Precision@50 (Holdout Domains)** | `0.8600` (86.0%) | **`1.0000` (100.0%)** (+14.0% lift) |
+| **ROC-AUC (Holdout Domains)** | `0.9104` | **`0.9608`** |
+| **PR-AUC (Holdout Domains)** | `0.7259` | **`0.8701`** |
+| **Editorial Triage ROI** | 22.4 clicks/hr | **99.5 clicks/hr** ($9.3\times$ catalog leverage) |
 
 ---
 
-## What you get
+## 3-Sentence Employer Summary
 
-| Path | What it is |
-|---|---|
-| `notebooks/` | Week 1–2 **first-win notebooks** (Colab-ready). Start here. |
-| `scripts/01–05` + `run_all.py` | The runnable reference pipeline: prepare → baseline → train → evaluate → PDF. |
-| `data/raw/content_refresh_anonymized.csv` | The anonymized starter dataset (~30k pages). |
-| `outputs/` | Example outputs so you can see the **target shape** (`model_report.md`, `refresh_queue_sample.csv`, `charts/`). |
-| `work/` | **Your space.** Lane experiments and your capstone live here — see `work/README.md`. |
-| `docs/` | The core docs + the data dictionary (see below). |
-
-### Read these (in `docs/`)
-
-1. **`ml-core-foundation-framework.md`** — the first-principles map of ML as a whole system. The backbone of the live sessions.
-2. **`ml-intern-dataset-and-lane-guide.md`** — how to use the data safely, the capstone workflow, and the analysis "lanes" you can pick from.
-3. **`intern-free-tooling-guide.md`** — the zero-budget tool stack (Python, Colab, free AI assistants). You never need to pay for anything.
-4. **`data-dictionary.md`** — all 44 columns: meaning, scale, and gotchas. Keep it open while you work.
+- **What I Built:** An end-to-end machine learning content opportunity ranking system and interactive editorial triage playbook that predicts future organic click capture and assigns actionable refresh reason codes.
+- **On What Data:** Evaluated across 10,000 mature content assets from 30 client domains using the FlyRank Search Intelligence warehouse, with strictly isolated 15-day pre/post observation windows and a zero-leakage client-grouped holdout split.
+- **What It Showed:** Gradient Boosting achieved **100.0% Precision@50** and **0.9608 ROC-AUC** on unseen client domains (+14% over standard industry heuristics), demonstrating that targeted editorial triage captures **10.2% of search traffic in just 1.1% of review time (9.3× ROI lift)**.
 
 ---
 
-## The pipeline (what `run_all.py` does)
+## Research Progression & Weekly Assignment Notebooks
+
+Every stage of the 8-week research track is documented in an executable, reproducible notebook in [`work/notebooks/`](work/notebooks/):
+
+| Week | Milestone | Focus Area & Notebook | Colab Badge | Status |
+|---|---|---|---|---|
+| **Week 1** | ML-02 | Research Question Framing & Misallocation Cost | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w01_research_question.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 2** | ML-03 | ML Task Framing & Prediction Target Definition (`clk_future >= 5`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w02_ml_task_framing.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 3** | ML-04 | Data Contract, Schema Integrity & Quality Thresholds | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_data_contract.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 3** | ML-05 | Feature Leakage Audit (Exclusion of `trend_pct`, `is_declining_label`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_feature_leakage_check.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 4** | ML-06 | Signal Audit (Search impressions, striking rank, CTR) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_signal_audit.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 4** | ML-07 | Rule Baseline Score Formulation (Log impressions × striking multiplier) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_baseline_score.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 5** | ML-08 | Model Training on Client-Grouped Holdout Split (`GroupShuffleSplit`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w05_model.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 6** | ML-09 | Validation Audit, Permutation Importance & Error Hand-Review | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w06_validation_audit.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 7** | ML-10 | Content Action Playbook (Dual-Engine Priority Queue, Reason Codes & ROI) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w07_action_playbook.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 8** | ML-11 | **Capstone Notebook** (End-to-End Synthesis, Demo & Shareable Cuts) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true) | ✅ Complete |
+
+---
+
+## Repository Structure
 
 ```text
-01_prepare_features.py   clean + build the feature vector, define the label
-02_baseline_score.py     a transparent hand-rule "fix this first" score
-03_train_model.py        logistic regression, decision tree, random forest (client-holdout split)
-04_evaluate_and_export.py  ranked queue + charts + Markdown report
-05_build_pdf_report.py   a shareable PDF summary
+├── index.html                  # Public deployed research paper (served via GitHub Pages)
+├── submission/
+│   └── paper_url.txt           # Deployment URL: https://alinoor4.github.io/flyrank-internship/
+├── work/
+│   ├── index.html              # Research paper mirror
+│   ├── capstone_report.md      # Full 8-section research report matching internship rubric
+│   ├── notebooks/              # All completed weekly assignment & capstone notebooks
+│   │   ├── w01_research_question.ipynb
+│   │   ├── w02_ml_task_framing.ipynb
+│   │   ├── w03_data_contract.ipynb
+│   │   ├── w03_feature_leakage_check.ipynb
+│   │   ├── w04_signal_audit.ipynb
+│   │   ├── w04_baseline_score.ipynb
+│   │   ├── w05_model.ipynb
+│   │   ├── w06_validation_audit.ipynb
+│   │   ├── w07_action_playbook.ipynb
+│   │   └── capstone.ipynb
+│   ├── figures/                # Publication-ready charts (PNG & SVG)
+│   │   ├── action_mix.png / .svg
+│   │   ├── reason_codes.png / .svg
+│   │   ├── cost_value_curve.png / .svg
+│   │   └── model_vs_baseline_queue.png / .svg
+│   └── outputs/                # Action queue exports and summary metrics
+│       ├── ranked_action_queue.csv
+│       └── w07_playbook_summary.json
+├── scripts/                    # Reference pipeline utilities
+├── docs/                       # Core dataset dictionaries and internship guides
+├── requirements.txt            # Project dependencies
+└── README.md
 ```
 
-On the bundled sample, the learned model clearly beats the hand-written rule at picking the right
-pages to review first (**Precision@50 ≈ 0.24 → 0.74**; the model number can land 0.68–0.74
-depending on library versions — the ~3x lift is the point). The notebooks compute these numbers
-live, so they always reflect the current data and environment.
+---
 
-**Teaching point:** the model is the capstone, but the *workflow* is the lesson —
-`problem framing → data cleaning → baseline → first model → evaluation → explainable recommendation`.
+## Quickstart & Reproducibility
+
+To reproduce the analysis and pipeline from a fresh clone:
+
+```bash
+# 1. Clone this repository
+git clone https://github.com/alinoor4/flyrank-internship.git
+cd flyrank-internship
+
+# 2. Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate       # On Windows: .\.venv\Scripts\Activate.ps1
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Execute the full Capstone notebook top-to-bottom
+jupyter nbconvert --to notebook --execute work/notebooks/capstone.ipynb --output work/notebooks/capstone.ipynb
+```
 
 ---
 
-## Data safety (read `DATA_USE.md`)
+## 5-Minute Showcase Demo Outline
 
-- Only the small **anonymized** CSV ships here — no client names, domains, URLs, titles, or keywords.
-- **Never** add raw private client data to this repo or your fork. Need more data? Request an approved
-  release from your mentor — never export it yourself.
-- Don't paste client data into third-party AI tools.
-- Frame every result as **observed / measured / directional / decision-support** — never
-  "I predicted Google's algorithm."
-
-The `.gitignore` blocks datasets by default, and CI fails any commit that includes a dataset.
+- **Minute 1: The Decision & Problem** — Enterprise content teams manage 10,000+ published URLs but can only review 30–80 pages per month. Naive rules chase impressions and waste hours on zero-click SERPs (AI Overviews) while letting page-2 striking distance articles decay.
+- **Minute 2: Data & Method** — 10,000 mature content assets across 30 client domains from FlyRank's warehouse release with strictly isolated 15-day pre/post observation windows and `GroupShuffleSplit` on `client_id` (0 domain overlap).
+- **Minute 3: The Key Chart** — Editorial Cost-Value Curve (**Figure 3**) showing how the prioritized queue achieves extreme editorial leverage ($9.3\times$ ROI lift).
+- **Minute 4: One Honest Result & Error Audit** — Gradient Boosting achieves **$100.0\%$ Precision@50** vs Rule Baseline's **$86.0\%$** (ROC-AUC = 0.9608); error audit on broad queries cannibalized by Google AI Overviews.
+- **Minute 5: The Recommendation & Playbook** — Dual-Engine Priority Queue, automated reason codes (`STRIKING_DISTANCE_HIGH_OPS`, `LOW_CTR_OPPORTUNITY`), 5-point checklist, and strict No-Go policies.
 
 ---
 
-## Assignments & schedule
+## Public Safety & Data Credit
 
-Weekly assignments, live events, and the capstone live on **your portal board** (your
-enrollment email has your access link). This repo is the shared technical foundation they all
-build on — and the `skills/` folder here is the instruction library for your AI assistant
-(start at [skills/README.md](skills/README.md)).
-
-**First time with GitHub?** You need exactly four things (full walkthrough: [SETUP.md](SETUP.md)):
-1. A free account at github.com.
-2. Your own copy of this repo: **Use this template → Create a new repository** → public.
-   (One click — brings the notebooks, `work/`, and the CI leak-guard with it.)
-3. In Colab: *File → Save a copy in GitHub* — opened from your copy's badges, the dialog is
-   already pre-filled with your repo and path, so it's just OK (Colab handles auth).
-4. That's your submission repo — share its **github.com/you/your-repo** URL with Assignment 1
-   (never a colab.research.google.com or drive.google.com link).
-
----
-
-*Track leads: Mirza Ašćerić (ML) · Hole (data engineering). Code under MIT (see `LICENSE`); data under `DATA_USE.md`.*
+- **No Private Data**: All client names, domain URLs, credentials, and raw query strings have been stripped or pseudonymized.
+- **Honest Claim Language**: All findings report measured associations in the FlyRank 2026 search dataset; no causal claims are made regarding Google's internal ranking weights without an experimental intervention design.
+- **Attribution**: Built on the [FlyRank](https://flyrank.ai/) ML Internship dataset.

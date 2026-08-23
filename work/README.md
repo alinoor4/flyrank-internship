@@ -1,55 +1,58 @@
-# work/ — your space
+# work/ — Capstone Workspace & Deliverables
 
-Everything you build lives here: lane experiments, notebooks, figures, and your capstone
-report. The rest of the repo is the shared reference; this folder is yours.
+This directory contains the completed experiment notebooks, visualizations, data exports, and research reports for **Ali Noor's FlyRank ML Internship Capstone (Lane 1: Ranking Signal Analysis & Opportunity Scoring)**.
 
-## Rules of the road
+---
 
-1. **Copy, don't edit.** Need to change the pipeline? Copy the script here
-   (e.g. `work/scripts/03_train_model_v2.py`) or adjust the feature lists in
-   `scripts/ml_utils.py`. The reference pipeline in `scripts/` stays pristine — it's the
-   baseline you compare against, and reviewers expect to find it unchanged.
-2. **No datasets in git.** CSVs inside `work/` are gitignored, and CI fails if any dataset
-   CSV is committed anywhere in the repo. Small summary tables belong in your report as
-   markdown, not as data files.
-3. **Stay reproducible.** Fix your random seeds and note them in your report. Someone with a
-   fresh clone should be able to re-run your work from your instructions alone.
-4. **Public-safety language.** Everything here may end up public with your submission:
-   observed / measured / directional / decision-support — no client-identifying details,
-   no causal claims without a design (see `DATA_USE.md`).
-
-## Suggested layout
+## Workspace Layout
 
 ```text
 work/
-  notebooks/            your experiment notebooks
-  scripts/              copied + modified pipeline pieces
-  figures/              charts for your report
-  capstone_report.md    your capstone write-up (start from the template)
+├── index.html                  # Local mirror of the published research paper
+├── capstone_report.md          # 8-section research report matching internship rubric
+├── capstone_report_template.md # Original grading template reference
+├── notebooks/                  # All 10 completed assignment and capstone notebooks
+│   ├── w01_research_question.ipynb
+│   ├── w02_ml_task_framing.ipynb
+│   ├── w03_data_contract.ipynb
+│   ├── w03_feature_leakage_check.ipynb
+│   ├── w04_signal_audit.ipynb
+│   ├── w04_baseline_score.ipynb
+│   ├── w05_model.ipynb
+│   ├── w06_validation_audit.ipynb
+│   ├── w07_action_playbook.ipynb
+│   └── capstone.ipynb
+├── figures/                    # Publication-grade PNG & SVG charts
+│   ├── action_mix.png / .svg
+│   ├── reason_codes.png / .svg
+│   ├── cost_value_curve.png / .svg
+│   └── model_vs_baseline_queue.png / .svg
+└── outputs/                    # Scored queue CSV and playbook summary metrics
+    ├── ranked_action_queue.csv
+    └── w07_playbook_summary.json
 ```
 
-## Capstone
+---
 
-Copy `capstone_report_template.md` to `capstone_report.md` and fill it in as you go — it
-mirrors the eight axes your work is graded on, so writing it early keeps you honest.
+## Assignment Notebook Index
 
-## Your assignment index
-
-Your skeleton notebooks are already in `notebooks/` — one per assignment, pre-named.
-Tick them off as you go; this table is the map of your work (each badge opens the notebook
-in Colab, straight from your repo):
-
-| Notebook | Assignment | Open | Status |
+| Notebook | Milestone | Colab Badge | Status |
 |---|---|---|---|
-| `notebooks/w01_research_question.ipynb` | ML-02 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w01_research_question.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w02_ml_task_framing.ipynb` | ML-03 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w02_ml_task_framing.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w03_data_contract.ipynb` | ML-04 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_data_contract.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w03_feature_leakage_check.ipynb` | ML-05 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_feature_leakage_check.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w04_signal_audit.ipynb` | ML-06 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_signal_audit.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w04_baseline_score.ipynb` | ML-07 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_baseline_score.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w05_model.ipynb` | ML-08 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w05_model.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w06_validation_audit.ipynb` | ML-09 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w06_validation_audit.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w07_action_playbook.ipynb` | ML-10 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w07_action_playbook.ipynb?flush_cache=true) | ☐ |
-| `notebooks/capstone.ipynb` | ML-11 (the paper mirrors it) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true) | ☐ |
+| `notebooks/w01_research_question.ipynb` | ML-02 (Question & Framing) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w01_research_question.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w02_ml_task_framing.ipynb` | ML-03 (Task & Target) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w02_ml_task_framing.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w03_data_contract.ipynb` | ML-04 (Data Contract) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_data_contract.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w03_feature_leakage_check.ipynb` | ML-05 (Leakage Check) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w03_feature_leakage_check.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w04_signal_audit.ipynb` | ML-06 (Signal Audit) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_signal_audit.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w04_baseline_score.ipynb` | ML-07 (Baseline Score) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w04_baseline_score.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w05_model.ipynb` | ML-08 (Model Training) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w05_model.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w06_validation_audit.ipynb` | ML-09 (Validation Audit) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w06_validation_audit.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/w07_action_playbook.ipynb` | ML-10 (Action Playbook) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w07_action_playbook.ipynb?flush_cache=true) | ✅ Complete |
+| `notebooks/capstone.ipynb` | ML-11 (Capstone Synthesis) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true) | ✅ Complete |
 
-When your paper is deployed, put its exact URL in `../submission/paper_url.txt` (one line).
+---
+
+## Research Deliverables
+
+- **Live Research Paper:** [https://alinoor4.github.io/flyrank-internship/](https://alinoor4.github.io/flyrank-internship/) (Configured in `../submission/paper_url.txt`)
+- **Full Capstone Markdown Report:** [`capstone_report.md`](capstone_report.md)
+- **Data Source Credit:** Built on the [FlyRank](https://flyrank.ai/) ML Internship dataset.
