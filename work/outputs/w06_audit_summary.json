@@ -1,0 +1,93 @@
+{
+  "paper_critiques": [
+    {
+      "finding": "Freshness Multiplier (Finding #4)",
+      "issue": "Construct overlap (health score contains impressions) & selection bias in 365+ cohort"
+    },
+    {
+      "finding": "Growth Classification (ML Appendix p.29)",
+      "issue": "Split leakage (non-grouped) & missing base rate context (62% base rate vs 71% accuracy)"
+    }
+  ],
+  "model_validation_comparison": [
+    {
+      "Model": "Rule Baseline (Week 4)",
+      "Random Base Rate": "0.2530",
+      "Random ROC-AUC": "0.8767",
+      "Random PR-AUC": "0.7622",
+      "Random P@50": "96.0%",
+      "Grouped Base Rate": "0.1997",
+      "Grouped ROC-AUC": "0.9141",
+      "Grouped PR-AUC": "0.7440",
+      "Grouped P@50": "84.0%",
+      "PR-AUC Gap (Delta)": "+0.0182"
+    },
+    {
+      "Model": "Logistic Regression",
+      "Random Base Rate": "0.2530",
+      "Random ROC-AUC": "0.9597",
+      "Random PR-AUC": "0.9088",
+      "Random P@50": "100.0%",
+      "Grouped Base Rate": "0.1997",
+      "Grouped ROC-AUC": "0.9573",
+      "Grouped PR-AUC": "0.8704",
+      "Grouped P@50": "100.0%",
+      "PR-AUC Gap (Delta)": "+0.0385"
+    },
+    {
+      "Model": "Decision Tree (depth=4)",
+      "Random Base Rate": "0.2530",
+      "Random ROC-AUC": "0.9563",
+      "Random PR-AUC": "0.8891",
+      "Random P@50": "100.0%",
+      "Grouped Base Rate": "0.1997",
+      "Grouped ROC-AUC": "0.9559",
+      "Grouped PR-AUC": "0.8532",
+      "Grouped P@50": "98.0%",
+      "PR-AUC Gap (Delta)": "+0.0359"
+    },
+    {
+      "Model": "Random Forest (depth=6)",
+      "Random Base Rate": "0.2530",
+      "Random ROC-AUC": "0.9627",
+      "Random PR-AUC": "0.9124",
+      "Random P@50": "100.0%",
+      "Grouped Base Rate": "0.1997",
+      "Grouped ROC-AUC": "0.9633",
+      "Grouped PR-AUC": "0.8813",
+      "Grouped P@50": "100.0%",
+      "PR-AUC Gap (Delta)": "+0.0311"
+    },
+    {
+      "Model": "Gradient Boosting (depth=4)",
+      "Random Base Rate": "0.2530",
+      "Random ROC-AUC": "0.9633",
+      "Random PR-AUC": "0.9140",
+      "Random P@50": "100.0%",
+      "Grouped Base Rate": "0.1997",
+      "Grouped ROC-AUC": "0.9643",
+      "Grouped PR-AUC": "0.8840",
+      "Grouped P@50": "100.0%",
+      "PR-AUC Gap (Delta)": "+0.0300"
+    }
+  ],
+  "leakage_audit": {
+    "timeline_verified": true,
+    "excluded_label_columns": [
+      "clk_future",
+      "trend_pct",
+      "trend_direction",
+      "is_declining_label"
+    ],
+    "excluded_product_flags": [
+      "health_score",
+      "optimization_flags"
+    ],
+    "injection_attack_detected": true
+  },
+  "safe_claims": {
+    "claim_1": "In out-of-fold validation across held-out client domains, Gradient Boosting achieved an observed Precision@50 of 1.000 (50/50 items with >= 5 future clicks) against a validation base rate of 19.86% (PR-AUC 0.8701). This indicates strong directional decision-support value for triaging content refresh candidates, though actual click gains require prospective intervention testing.",
+    "claim_2": "In this portfolio, pre-period search volume and striking-distance position (ranks 4-30) were strongly associated with subsequent click capture. These features serve as measured prioritization filters to identify high-opportunity content assets, but cross-sectional correlation does not establish causal rank improvement.",
+    "claim_3": "The model functions as an automated triage assistant that ranks candidate URLs for human editorial review based on measured historical demand patterns in our portfolio. It models empirical client traffic rather than Google's proprietary search ranking engine."
+  }
+}
