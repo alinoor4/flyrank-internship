@@ -116,11 +116,11 @@ jupyter nbconvert --to notebook --execute work/notebooks/capstone.ipynb --output
 
 ## 5-Minute Showcase Demo Outline
 
-- **Minute 1: The Decision & Problem** — Enterprise content teams manage 10,000+ published URLs but can only review 30–80 pages per month. Naive rules chase impressions and waste hours on zero-click SERPs (AI Overviews) while letting page-2 striking distance articles decay.
-- **Minute 2: Data & Method** — 10,000 mature content assets across 30 client domains from FlyRank's warehouse release with strictly isolated 15-day pre/post observation windows and `GroupShuffleSplit` on `client_id` (0 domain overlap).
-- **Minute 3: The Key Chart** — Editorial Cost-Value Curve (**Figure 3**) showing how the prioritized queue achieves extreme editorial leverage ($9.3\times$ ROI lift).
-- **Minute 4: One Honest Result & Error Audit** — Gradient Boosting achieves **$100.0\%$ Precision@50** vs Rule Baseline's **$86.0\%$** (ROC-AUC = 0.9608); error audit on broad queries cannibalized by Google AI Overviews.
-- **Minute 5: The Recommendation & Playbook** — Dual-Engine Priority Queue, automated reason codes (`STRIKING_DISTANCE_HIGH_OPS`, `LOW_CTR_OPPORTUNITY`), 5-point checklist, and strict No-Go policies.
+- **The Decision & Problem** — Enterprise content teams manage 10,000+ published URLs but can only review 30–80 pages per month. Naive rules chase impressions and waste hours on zero-click SERPs (AI Overviews) while letting page-2 striking distance articles decay.
+- **Data & Method** — 10,000 mature content assets across 30 client domains from FlyRank's warehouse release with strictly isolated 15-day pre/post observation windows and `GroupShuffleSplit` on `client_id` (0 domain overlap).
+- **The Key Chart** — Editorial Cost-Value Curve (**Figure 3**) showing how the prioritized queue achieves extreme editorial leverage ($9.3\times$ ROI lift).
+- **One Honest Result & Error Audit** — Gradient Boosting achieves **$100.0\%$ Precision@50** vs Rule Baseline's **$86.0\%$** (ROC-AUC = 0.9608); error audit on broad queries cannibalized by Google AI Overviews.
+- **The Recommendation & Playbook** — Dual-Engine Priority Queue, automated reason codes (`STRIKING_DISTANCE_HIGH_OPS`, `LOW_CTR_OPPORTUNITY`), 5-point checklist, and strict No-Go policies.
 
 ---
 
