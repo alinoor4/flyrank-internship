@@ -204,9 +204,57 @@ jupyter nbconvert --to notebook --execute work/notebooks/capstone.ipynb --output
 
 ---
 
+## 9. Showcase Demo Outline & Shareable Cuts
+
+### 5-Minute Showcase Demo Outline
+1. **Minute 1: The Decision & Problem**
+   - *The Reality:* Enterprise content teams manage 10,000+ published URLs but can only review 30–80 pages per month.
+   - *The Trap:* Naive rules chase impressions and waste hours on zero-click SERPs (AI Overviews) while letting page-2 striking distance articles decay.
+2. **Minute 2: Data & Method**
+   - *Dataset:* 10,000 mature content assets across 30 client domains from FlyRank's warehouse release.
+   - *Hygiene:* Strictly isolated 15-day pre/post observation windows; out-of-domain evaluation using `GroupShuffleSplit` on `client_id` (0 domain overlap).
+3. **Minute 3: The Key Chart (Editorial Cost-Value Curve)**
+   - *Figure 3 Walkthrough:* Showing how the prioritized queue achieves extreme editorial leverage, capturing 10.2% of traffic in 1.1% of review time and 39.3% of traffic in 11.0% of review time.
+4. **Minute 4: One Honest Result & Error Audit**
+   - *Metric:* Gradient Boosting achieved **100.0% Precision@50** vs the Rule Baseline's **86.0%** (against a 19.86% holdout base rate, ROC-AUC = 0.9608).
+   - *Error Mode:* Hand-audited false positives show that broad definitional queries get cannibalized by Google AI answers—proving why decision-support triage beats full automation.
+5. **Minute 5: The Recommendation & Playbook**
+   - *Dual-Engine Queue:* Automated Reason Codes (`STRIKING_DISTANCE_HIGH_OPS`, `LOW_CTR_OPPORTUNITY`, etc.) combined with a 5-Point Editorial Review Checklist and strict No-Go policies.
+
+---
+
+### Shareable Cuts of This Work
+
+#### Cut 1: Social Post (Methodology & Finding)
+> **Why 80% of SEO content refreshes waste editorial bandwidth (and how we fixed it with ML):**
+>
+> Most content teams prioritize refreshes with a simple rule: *high impressions + page 2 rank = update now*.
+>
+> But when we evaluated that heuristic across 10,000 content items from 30 client domains on FlyRank search intelligence data, 14% of top-recommended articles generated zero future clicks—frequently due to zero-click Google AI Overviews and shifting intent.
+>
+> By framing content refresh prioritization as a supervised ranking task evaluated on strictly out-of-fold client domains (0 domain overlap), our Gradient Boosting model reached **100.0% Precision@50** (vs 86.0% for the rule baseline against a 19.86% base rate, ROC-AUC 0.9608).
+>
+> **The operational ROI:** Reviewing the Top 50 prioritized URLs captures **10.2% of total catalog search traffic in just 1.1% of review time (99.5 clicks/hour)**.
+>
+> Read the full deployed research paper and interactive action queue: https://alinoor4.github.io/flyrank-internship/
+>
+> #MachineLearning #SEO #DataScience #SearchIntelligence #FlyRank
+
+---
+
+#### Cut 2: Employer-Facing Summary (3 Sentences)
+> **What I built:** An end-to-end machine learning content opportunity ranking system and interactive editorial triage playbook that predicts future organic click capture and assigns actionable refresh reason codes.
+>
+> **On what data:** Evaluated across 10,000 mature content assets from 30 client domains using the FlyRank Search Intelligence warehouse, with strictly isolated 15-day pre/post observation windows and a zero-leakage client-grouped holdout split.
+>
+> **What it showed:** Gradient Boosting achieved 100.0% Precision@50 and 0.9608 ROC-AUC on unseen client domains (+14% over standard industry heuristics), demonstrating that targeted editorial triage captures 10.2% of search traffic in just 1.1% of review time (9.3× ROI lift).
+
+---
+
 ## Claims Checklist & Acknowledgments
 
 - **Observed / Measured Framing**: All claims reflect measured associations in the FlyRank 2026 search dataset; no causal claims are made without an experimental intervention design.
 - **No Algorithm Claims**: Findings describe portfolio traffic patterns, not Google's proprietary search ranking weights.
 - **Base Rate Transparency**: Base rates ($\alpha = 24.73\%$ overall, $\alpha_{\text{val}} = 19.86\%$ out-of-fold) are reported alongside all Precision@K and ROC-AUC metrics.
 - **Data Credit**: Built on the [FlyRank](https://flyrank.ai/) ML Internship dataset.
+
