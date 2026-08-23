@@ -29,7 +29,7 @@ We addressed the enterprise editorial triage bottleneck: determining which URLs 
 
 ---
 
-## 3-Sentence Employer Summary
+## 3-Sentence Summary
 
 - **What I Built:** An end-to-end machine learning content opportunity ranking system and interactive editorial triage playbook that predicts future organic click capture and assigns actionable refresh reason codes.
 - **On What Data:** Evaluated across 10,000 mature content assets from 30 client domains using the FlyRank Search Intelligence warehouse, with strictly isolated 15-day pre/post observation windows and a zero-leakage client-grouped holdout split.
