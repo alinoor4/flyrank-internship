@@ -52,7 +52,7 @@ Every stage of the 8-week research track is documented in an executable, reprodu
 | **Week 5** | ML-08 | Model Training on Client-Grouped Holdout Split (`GroupShuffleSplit`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w05_model.ipynb?flush_cache=true) | ✅ Complete |
 | **Week 6** | ML-09 | Validation Audit, Permutation Importance & Error Hand-Review | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w06_validation_audit.ipynb?flush_cache=true) | ✅ Complete |
 | **Week 7** | ML-10 | Content Action Playbook (Dual-Engine Priority Queue, Reason Codes & ROI) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/w07_action_playbook.ipynb?flush_cache=true) | ✅ Complete |
-| **Week 8** | ML-11 | **Capstone Notebook** (End-to-End Synthesis, Demo & Shareable Cuts) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true) | ✅ Complete |
+| **Week 8** | ML-11 | **Capstone Notebook** (End-to-End Synthesis & Showcase Demo) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alinoor4/flyrank-internship/blob/main/work/notebooks/capstone.ipynb?flush_cache=true) | ✅ Complete |
 
 ---
 
